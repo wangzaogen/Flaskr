@@ -1,4 +1,4 @@
-# Flaskr
+# [Flaskr](http://docs.jinkan.org/docs/flask/tutorial/introduction.html)
 Flask demo
 
 1. 允许用户用配置文件里指定的凭证登入登出。只支持一个用户。
