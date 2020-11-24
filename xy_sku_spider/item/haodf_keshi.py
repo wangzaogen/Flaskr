@@ -17,3 +17,14 @@ class HaoDfKeshi(declarative_base()):
         self.create_by = 'spider'
 
 
+class HaoDfKeshiDoctorRel(declarative_base()):
+    __tablename__ = 'xy_spider_haodf_keshi_doctor_rel'
+    id = Column(Integer, primary_key=True)
+    keshi_id = Column(Integer)
+    first_department = Column(String(100))
+    secondary_department = Column(String(100))
+    doctor_name = Column(String(100))
+    doctor_url = Column(String(500))
+    create_by = Column(String(50))
+
+

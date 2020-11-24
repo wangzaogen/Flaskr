@@ -1,8 +1,9 @@
 
 
 import threading
-from xy_sku_spider.utility.date import *
+from xy_sku_spider.utility.date import get_time_string
 import random
+import time
 
 thread_pool_size = 50
 
@@ -17,7 +18,7 @@ class BaseSpider(object):
 
     def __init__(self, name):
         self.name = name
-        print('Today date is: %s' % self.date_string)
+        print('Today date is: {0}'.format(get_time_string))
 
         print("Target site is {0}.cn".format(name))
         self.mutex = threading.Lock()  # 创建锁

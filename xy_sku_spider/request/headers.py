@@ -34,9 +34,10 @@ def create_headers_one(host):
     headers["Referer"] = "https://www.{0}.com".format(host)
     return headers
 
-def create_headers_no_referer():
+def create_headers_referer(host):
     headers = dict()
     headers["User-Agent"] = random.choice(USER_AGENTS)
+    headers["Referer"] = host
     return headers
 
 proxy = {
