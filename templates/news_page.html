@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+{#<h2>Login</h2>#}
+{% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+    <ul class=entries>
+        {% for entry in news_info %}
+            <li>
+                <a href={{ entry.url|safe }}>{{ entry.name }}</a>
+{#                <h2>{{ entry.name }}</h2>{{ entry.url|safe }}#}
+                {% else %}
+            <li><em>Unbelievable.  No entries here so far</em>
+        {% endfor %}
+    </ul>
+{% endblock %}

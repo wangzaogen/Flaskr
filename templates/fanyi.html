@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+<h2>Translator</h2>
+{% if error %}<p class=error><strong>Result:</strong> {{ error }}{% endif %}
+<form action="{{ url_for('translator_en') }}" method=post>
+    <dl>
+        <dt>输入翻译:
+        <dd><input type=text name=translator_info>
+{#        <dt>结果:#}
+{#        <dd><input type=text name=result value="{{ error }}">#}
+        <dd><input type=submit value=DO>
+    </dl>
+</form>
+{% endblock %}
